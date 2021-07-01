@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -9,89 +8,16 @@ import InputField from 'components/Common/FormFields/InputField';
 import PhoneNumber from 'components/Register/PhoneNumber';
 
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { COUNTRY } from 'utils/enums';
 
-const schema = yup.object().shape({
-  firstName: yup.string().required('Please enter your First name'),
-  lastName: yup.string().required('Please enter your Last name'),
-  phoneNumber: yup
-    .string()
-    .required('Please enter your Phone')
-    .when('country', {
-      is: country => country === COUNTRY.USA,
-      then: yup.string().matches(/^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$/, 'Invalid Usa format'),
-      otherwise: yup.string().matches(/^[0-9]{4} [0-9]{3} [0-9]{3}$/, 'Invalid Aus format')
-    }),
-  email: yup
-    .string()
-    .required('Please enter your Email')
-    .email('Invalid email address')
-    .matches(/^[a-z]+[A-Za-z\d.@$!%*#?&]*$/, 'Must start with a lowercase letter'),
-
-  password: yup
-    .string()
-    .required('Please Enter your password')
-    .matches(
-      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/,
-      'Oops! You need a password longer than 8 characters with numbers and letters.'
-    )
-});
-
-const useStyles = makeStyles(theme => ({
-  halfWidth: {
-    width: '50%'
-  },
-  fullwidth: {
-    width: '100%'
-  },
-  button: {
-    width: '100%',
-    height: '60px',
-    '& .MuiButton-label': {
-      color: '#FFFFFF',
-      opacity: 0.9,
-      fontWeight: 500,
-      fontSize: '14px'
-    },
-
-    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.03)',
-    borderRadius: '2px'
-  },
-  icon: {
-    cursor: 'pointer',
-    padding: '21px 0px 0px 20px',
-    width: '24px',
-    height: '16px'
-  },
-  header: {
-    width: '414px',
-    height: '78px',
-    margin: 0
-  },
-  headerContainer: {
-    margin: 0,
-    position: 'relative',
-    top: '25%',
-    '-ms-transform': 'translateY(-50%)',
-    transform: 'translateY(-50%)'
-  },
-  headerIcon: {
-    cursor: 'pointer',
-    height: '30px'
-  },
-
-  backdrop: {
-    zIndex: theme.zIndex.drawer + 1,
-    backgroundColor: 'rgba(255, 255, 255, 0.9)'
-  }
-}));
+import { FormValues } from 'routes/types';
+import { formStyle } from './style';
+import { registerSchema } from 'pages/Register/validation';
 
 function Form({ setFormData }) {
-  const classes = useStyles({ error: false });
+  const classes = formStyle({ error: false });
   const [loading, setLoading] = useState<boolean>(false);
 
-  const form = useForm({
+  const form = useForm<FormValues>({
     mode: 'onBlur',
     defaultValues: {
       firstName: 'Ahmad',
@@ -101,7 +27,7 @@ function Form({ setFormData }) {
       country: 'usa',
       phoneNumber: '03218447889'
     },
-    resolver: yupResolver(schema)
+    resolver: yupResolver(registerSchema)
   });
 
   const { control, formState, handleSubmit } = form;

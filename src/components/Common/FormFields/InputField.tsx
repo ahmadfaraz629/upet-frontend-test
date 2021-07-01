@@ -1,7 +1,7 @@
-import React, { memo, FC } from 'react';
+import React, { memo, forwardRef, ForwardRefRenderFunction } from 'react';
 import { FieldError, FieldValues } from 'react-hook-form';
-import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import { inputFieldStyle } from './style';
 
 interface IInputFieldProps extends FieldValues {
   label?: string;
@@ -10,26 +10,8 @@ interface IInputFieldProps extends FieldValues {
   capitilizeFirst?: boolean;
 }
 
-const useStyles = makeStyles(theme => ({
-  textField: (props: { error: boolean }) => ({
-    '& .MuiFilledInput-root': {
-      height: '58px',
-      backgroundColor: 'inherit',
-      border: `1px solid ${props.error ? '#F44336' : '#DFDFDF'}`,
-      boxSizing: 'border-box',
-      borderRadius: '2px'
-    },
-    '& .MuiFilledInput-underline:after, .MuiFilledInput-underline:before': {
-      borderBottom: 'none'
-    },
-    '& .MuiFormHelperText-contained': {
-      marginLeft: '0px'
-    }
-  })
-}));
-
-const InputField: FC<IInputFieldProps> = ({ error, label, capitilizeFirst, ...props }) => {
-  const classes = useStyles({ error: !!error });
+const InputField: ForwardRefRenderFunction<any, IInputFieldProps> = ({ error, label, capitilizeFirst, ...props }) => {
+  const classes = inputFieldStyle({ error: !!error, border: true });
 
   const capitilizeFirstHandle = e => {
     const value = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
@@ -50,5 +32,4 @@ const InputField: FC<IInputFieldProps> = ({ error, label, capitilizeFirst, ...pr
     />
   );
 };
-
-export default memo(InputField);
+export default memo(forwardRef(InputField));

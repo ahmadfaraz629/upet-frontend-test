@@ -1,11 +1,11 @@
-import React, { memo, FC } from 'react';
+import React, { memo, forwardRef, ForwardRefRenderFunction } from 'react';
 import { FieldError, FieldValues } from 'react-hook-form';
-import { makeStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
 import FilledInput from '@material-ui/core/FilledInput';
 import InputLabel from '@material-ui/core/InputLabel';
 
 import MaskedInput from 'react-text-mask';
+import { inputFieldStyle } from './style';
 
 interface InputMaskedFieldProps extends FieldValues {
   label?: string;
@@ -14,24 +14,6 @@ interface InputMaskedFieldProps extends FieldValues {
   capitilizeFirst?: boolean;
   pattern: string[];
 }
-
-const useStyles = makeStyles(theme => ({
-  textField: (props: any) => ({
-    '& .MuiFilledInput-root': {
-      height: '58px',
-      backgroundColor: 'inherit',
-      border: `1px solid ${props.error ? '#F44336' : '#DFDFDF'}`,
-      boxSizing: 'border-box',
-      borderRadius: '2px'
-    },
-    '& .MuiFilledInput-underline:after, .MuiFilledInput-underline:before': {
-      borderBottom: 'none'
-    },
-    '& .MuiFormHelperText-contained': {
-      marginLeft: '0px'
-    }
-  })
-}));
 
 function TextMaskCustom(props) {
   const { inputRef, pattern, ...other } = props;
@@ -48,8 +30,14 @@ function TextMaskCustom(props) {
   );
 }
 
-const InputMaskedField: FC<InputMaskedFieldProps> = ({ error, label, capitilizeFirst, mask, ...props }) => {
-  const classes = useStyles({ error: !!error });
+const InputMaskedField: ForwardRefRenderFunction<any, InputMaskedFieldProps> = ({
+  error,
+  label,
+  capitilizeFirst,
+  mask,
+  ...props
+}) => {
+  const classes = inputFieldStyle({ error: !!error, border: false });
   return (
     <>
       <FormControl className={classes.textField} variant='filled' error={!!error}>
@@ -62,4 +50,4 @@ const InputMaskedField: FC<InputMaskedFieldProps> = ({ error, label, capitilizeF
   );
 };
 
-export default memo(InputMaskedField);
+export default memo(forwardRef(InputMaskedField));

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Icon from '@material-ui/core/Icon';
 import Box from '@material-ui/core/Box';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   header: {
     height: '78px',
     margin: 0
@@ -27,7 +27,7 @@ function Header() {
   return (
     <Box className={classes.header}>
       <Icon component='span' className={classes.headerContainer}>
-        <img src='/svgs/upet_logo.svg' alt='icon' className={classes.headerIcon} />
+        <img src='svgs/upet_logo.svg' alt='icon' className={classes.headerIcon} />
       </Icon>
     </Box>
   );

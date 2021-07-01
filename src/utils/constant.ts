@@ -15,3 +15,9 @@ export const COUNTRIES_MASK = {
   [COUNTRY.USA]: ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/],
   [COUNTRY.AUS]: [/[1-9]/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/]
 };
+
+export const COLORS = {
+  GREEN: '#02E0B1',
+  RED: '#F44336',
+  GREY: '#DFDFDF'
+};

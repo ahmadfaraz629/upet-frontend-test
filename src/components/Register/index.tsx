@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,6 +7,8 @@ import Form from 'components/Register/Form';
 import ReceivedApplication from 'components/Register/ReceivedApplication';
 
 import Header from 'components/Common/Header';
+import { COLORS } from 'utils/constant';
+import { FormValues } from 'routes/types';
 
 const theme = createMuiTheme({
   typography: {
@@ -14,10 +16,10 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: '#02E0B1'
+      main: COLORS.GREEN
     },
     action: {
-      disabledBackground: '#02E0B1',
+      disabledBackground: COLORS.GREEN,
       disabledOpacity: 0.6
     }
   }
@@ -35,7 +37,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 function Register() {
-  const [formData, setFormData] = React.useState(null);
+  const [formData, setFormData] = useState<FormValues>();
   const classes = useStyles({ isFormData: !!formData });
 
   return (
