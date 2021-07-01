@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/upet-frontend-test/static/css/main.819e4dd6.chunk.css",
-    "main.js": "/upet-frontend-test/static/js/main.17d8727c.chunk.js",
-    "main.js.map": "/upet-frontend-test/static/js/main.17d8727c.chunk.js.map",
+    "main.js": "/upet-frontend-test/static/js/main.307d0720.chunk.js",
+    "main.js.map": "/upet-frontend-test/static/js/main.307d0720.chunk.js.map",
     "runtime-main.js": "/upet-frontend-test/static/js/runtime-main.1091a34c.js",
     "runtime-main.js.map": "/upet-frontend-test/static/js/runtime-main.1091a34c.js.map",
     "static/js/2.af101fcc.chunk.js": "/upet-frontend-test/static/js/2.af101fcc.chunk.js",
@@ -12,7 +12,7 @@
     "static/js/4.95dbc0cd.chunk.js": "/upet-frontend-test/static/js/4.95dbc0cd.chunk.js",
     "static/js/4.95dbc0cd.chunk.js.map": "/upet-frontend-test/static/js/4.95dbc0cd.chunk.js.map",
     "index.html": "/upet-frontend-test/index.html",
-    "precache-manifest.7fe2b7cfe574e9445110b678bf756f9f.js": "/upet-frontend-test/precache-manifest.7fe2b7cfe574e9445110b678bf756f9f.js",
+    "precache-manifest.d2377a30559dc48dd9982de5a68f61b5.js": "/upet-frontend-test/precache-manifest.d2377a30559dc48dd9982de5a68f61b5.js",
     "service-worker.js": "/upet-frontend-test/service-worker.js",
     "static/css/main.819e4dd6.chunk.css.map": "/upet-frontend-test/static/css/main.819e4dd6.chunk.css.map",
     "static/js/2.af101fcc.chunk.js.LICENSE.txt": "/upet-frontend-test/static/js/2.af101fcc.chunk.js.LICENSE.txt",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.1091a34c.js",
     "static/js/3.68448af2.chunk.js",
     "static/css/main.819e4dd6.chunk.css",
-    "static/js/main.17d8727c.chunk.js"
+    "static/js/main.307d0720.chunk.js"
   ]
 }
