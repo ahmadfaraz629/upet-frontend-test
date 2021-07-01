@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/upet-frontend-test/precache-manifest.f9957c474883d2726013fc4dfc2adb20.js"
+  "/upet-frontend-test/precache-manifest.6c2f4315a89db213da3f65a829e466f5.js"
 );
 
 self.addEventListener('message', (event) => {
