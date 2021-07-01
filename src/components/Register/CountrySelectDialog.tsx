@@ -12,10 +12,10 @@ import { countrySelectDialogStyle } from './style';
 
 function CountrySelectDialog(props) {
   const classes = countrySelectDialogStyle({});
-  const { onClose, selectedValue, open } = props;
+  const { onClose, country, open } = props;
 
   const handleClose = () => {
-    onClose(selectedValue);
+    onClose(country);
   };
 
   const handleListItemClick = value => {
