@@ -1,0 +1,17 @@
+import { COUNTRY } from './enums';
+
+export const COUNTRIES = [
+  {
+    name: COUNTRY.USA,
+    label: '+1 - United States'
+  },
+  {
+    name: COUNTRY.AUS,
+    label: '+61 - Australia'
+  }
+];
+
+export const COUNTRIES_MASK = {
+  [COUNTRY.USA]: ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/],
+  [COUNTRY.AUS]: [/[1-9]/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/]
+};
