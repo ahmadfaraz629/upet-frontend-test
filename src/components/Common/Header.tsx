@@ -5,7 +5,6 @@ import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles(theme => ({
   header: {
-    width: '414px',
     height: '78px',
     margin: 0
   },
@@ -28,7 +27,7 @@ function Header() {
   return (
     <Box className={classes.header}>
       <Icon component='span' className={classes.headerContainer}>
-        <img src='/upet_logo.svg' alt='icon' className={classes.headerIcon} />
+        <img src='/svgs/upet_logo.svg' alt='icon' className={classes.headerIcon} />
       </Icon>
     </Box>
   );

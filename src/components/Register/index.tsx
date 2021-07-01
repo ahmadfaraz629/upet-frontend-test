@@ -15,14 +15,21 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       main: '#02E0B1'
+    },
+    action: {
+      disabledBackground: '#02E0B1',
+      disabledOpacity: 0.6
     }
   }
 });
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   root: (props: { isFormData: boolean }) => ({
     '& .MuiGrid-container': {
       flexWrap: props.isFormData ? 'nowrap' : 'wrap'
+    },
+    '& .MuiButton-contained.Mui-disabled': {
+      opacity: 0.6
     }
   })
 }));
@@ -32,14 +39,12 @@ function Register() {
   const classes = useStyles({ isFormData: !!formData });
 
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Container maxWidth='sm' className={classes.root}>
-          <Header />
-          {formData ? <ReceivedApplication formData={formData} /> : <Form setFormData={setFormData} />}
-        </Container>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <Container maxWidth='sm' className={classes.root}>
+        <Header />
+        {formData ? <ReceivedApplication formData={formData} /> : <Form setFormData={setFormData} />}
+      </Container>
+    </ThemeProvider>
   );
 }
 

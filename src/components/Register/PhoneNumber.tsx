@@ -58,7 +58,7 @@ function PhoneNumber({ form }) {
       <Grid container alignItems='flex-end' className={classes.iconTextField}>
         <Grid item>
           <Icon component='span' onClick={handleClickOpen}>
-            <img src={`/${country}_flag.svg`} alt='icon' className={classes.icon} />
+            <img src={`/svgs/${country}_flag.svg`} alt='icon' className={classes.icon} />
           </Icon>
           <Controller
             defaultValue=''

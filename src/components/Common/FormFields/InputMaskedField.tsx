@@ -44,7 +44,6 @@ function TextMaskCustom(props) {
       }}
       mask={pattern}
       placeholderChar={'\u2000'}
-      // showMask
     />
   );
 }

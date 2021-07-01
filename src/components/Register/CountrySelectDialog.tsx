@@ -65,7 +65,7 @@ function CountrySelectDialog(props) {
           <ListItem button onClick={() => handleListItemClick(country.name)} key={country.name}>
             <ListItemAvatar>
               <Avatar>
-                <img src={`/${country.name}_flag.svg`} alt='icon' />
+                <img src={`/svgs/${country.name}_flag.svg`} alt='icon' />
               </Avatar>
             </ListItemAvatar>
             <ListItemText primary={country.label} />

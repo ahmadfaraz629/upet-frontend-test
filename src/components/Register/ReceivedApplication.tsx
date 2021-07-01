@@ -35,11 +35,11 @@ function ReceivedApplication({ formData }) {
       <Grid container spacing={3}>
         <Grid item>
           <Icon component='span'>
-            <img src={`/notification.svg`} alt='icon' className={classes.notificationIcon} />
+            <img src={`/svgs/notification.svg`} alt='icon' className={classes.notificationIcon} />
           </Icon>
         </Grid>
         <Grid item>
-          <Grid container direction='column' style={{ width: '80%', flexWrap: 'nowrap' }}>
+          <Grid container direction='column'>
             <Grid item>
               <Typography variant='inherit' component='span' className={classes.notificationText}>
                 Thanks, {formData.firstName}!{' '}
@@ -56,7 +56,7 @@ function ReceivedApplication({ formData }) {
 
       <Box paddingTop='27px'>
         <Typography variant='inherit' component='span' className={classes.notificationParagraph}>
-          We’ll process your application as soon as possible and send you a decision within 30 days to {formData.phoneNumber} or
+          We’ll process your application as soon as possible and send you a decision within 30 days to {formData.phoneNumber} or{' '}
           {formData.email}. We will contact you in case more information is needed.
         </Typography>
       </Box>
