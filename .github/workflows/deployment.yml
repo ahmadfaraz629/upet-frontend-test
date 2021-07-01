@@ -21,6 +21,9 @@ jobs:
       - name: Installing modules
         run: yarn install
 
+      - name: Build
+        run: yarn build
+
       - name: Export Yarn
         run: yarn export
 

@@ -24,12 +24,12 @@ const Form: FC<IFormProps> = ({ submitFormAction }) => {
   const form = useForm<FormValues>({
     mode: 'onBlur',
     defaultValues: {
-      firstName: 'Ahmad',
-      lastName: 'Faraz',
-      email: 'ahmadfaraz629@gmail.com',
-      password: 'aaaaaaA1',
-      country: 'usa',
-      phoneNumber: '03218447889'
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      country: '',
+      phoneNumber: ''
     },
     resolver: yupResolver(registerSchema)
   });
