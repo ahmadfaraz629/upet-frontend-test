@@ -28,7 +28,7 @@ const Form: FC<IFormProps> = ({ submitFormAction }) => {
       lastName: '',
       email: '',
       password: '',
-      country: '',
+      country: 'usa',
       phoneNumber: ''
     },
     resolver: yupResolver(registerSchema)
