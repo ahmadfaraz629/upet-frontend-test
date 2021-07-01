@@ -56,7 +56,7 @@ or
 yarn start
 ```
 
-3. Head over to [http://localhost:3000](http://localhost:3000) to see the app live!
+3. Head over to [http://localhost:3000/upet-frontend-test](http://localhost:3000/upet-frontend-test) to see the app live!
 
 ## Form Submission
 
