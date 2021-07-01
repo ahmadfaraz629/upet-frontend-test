@@ -1,5 +1,6 @@
 import { COUNTRY } from './enums';
 
+export const ImageBaseUrl = `${process.env.PUBLIC_URL}/svgs/`;
 export const COUNTRIES = [
   {
     name: COUNTRY.USA,

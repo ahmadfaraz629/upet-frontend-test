@@ -1,6 +1,13 @@
-import {  SET_REDUX_KEY } from 'store/types';
+import { FormValues } from 'routes/types';
+import { SUBMIITED_FORM } from 'store/types';
 
-export const setReduxKey = (key, value) => ({
-  type: SET_REDUX_KEY,
-  payload: { key, value }
-});
+export const submitFormAction = {
+  STARTED: (formData: FormValues) => ({
+    type: SUBMIITED_FORM.STARTED,
+    payload: formData
+  }),
+  FULLFILLED: (formData: FormValues) => ({
+    type: SUBMIITED_FORM.FULLFILLED,
+    payload: formData
+  })
+};

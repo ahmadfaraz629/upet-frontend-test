@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Icon from '@material-ui/core/Icon';
 import Box from '@material-ui/core/Box';
+import { ImageBaseUrl } from 'utils/constant';
 
 const useStyles = makeStyles(() => ({
   header: {
@@ -27,7 +28,7 @@ function Header() {
   return (
     <Box className={classes.header}>
       <Icon component='span' className={classes.headerContainer}>
-        <img src='svgs/upet_logo.svg' alt='icon' className={classes.headerIcon} />
+        <img src={`${ImageBaseUrl}/upet_logo.svg`} alt='icon' className={classes.headerIcon} />
       </Icon>
     </Box>
   );

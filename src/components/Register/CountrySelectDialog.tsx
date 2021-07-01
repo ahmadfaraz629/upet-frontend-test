@@ -7,7 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
 import Avatar from '@material-ui/core/Avatar';
-import { COUNTRIES } from 'utils/constant';
+import { COUNTRIES, ImageBaseUrl } from 'utils/constant';
 import { countrySelectDialogStyle } from './style';
 
 function CountrySelectDialog(props) {
@@ -32,7 +32,7 @@ function CountrySelectDialog(props) {
           <ListItem button onClick={() => handleListItemClick(country.name)} key={country.name}>
             <ListItemAvatar>
               <Avatar>
-                <img src={`svgs/${country.name}_flag.svg`} alt='icon' />
+                <img src={`${ImageBaseUrl}/${country.name}_flag.svg`} alt='icon' />
               </Avatar>
             </ListItemAvatar>
             <ListItemText primary={country.label} />

@@ -1,19 +1,18 @@
-import { SET_REDUX_KEY} from 'store/types';
+import { SUBMIITED_FORM } from 'store/types';
 import { IAction } from 'types';
 
-const initialState = {
-};
+const initialState = {};
 
-function userReducer(state = initialState, action: IAction) {
+function appReducer(state = initialState, action: IAction) {
   switch (action.type) {
-    case SET_REDUX_KEY:
+    case SUBMIITED_FORM.FULLFILLED:
       return {
         ...state,
-        [action.payload.key]: action.payload.value
+        formData: action.payload
       };
     default:
   }
   return state;
 }
 
-export default userReducer;
+export default appReducer;

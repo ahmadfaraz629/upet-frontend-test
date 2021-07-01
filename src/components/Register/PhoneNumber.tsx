@@ -7,7 +7,7 @@ import CountrySelectDialog from 'components/Register/CountrySelectDialog';
 import { Controller } from 'react-hook-form';
 import InputMaskedField from 'components/Common/FormFields/InputMaskedField';
 
-import { COUNTRIES_MASK } from 'utils/constant';
+import { COUNTRIES_MASK, ImageBaseUrl } from 'utils/constant';
 import { phoneNumberStyle } from './style';
 
 function PhoneNumber({ form }) {
@@ -32,7 +32,7 @@ function PhoneNumber({ form }) {
       <Grid container alignItems='flex-end' className={classes.iconTextField}>
         <Grid item>
           <Icon component='span' onClick={handleClickOpen}>
-            <img src={`svgs/${country}_flag.svg`} alt='icon' className={classes.icon} />
+            <img src={`${ImageBaseUrl}/${country}_flag.svg`} alt='icon' className={classes.icon} />
           </Icon>
           <Controller
             defaultValue=''

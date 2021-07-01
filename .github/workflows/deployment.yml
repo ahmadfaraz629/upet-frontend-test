@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - master
+
+name: Deployment Workflow
+env:
+  IMAGE_TAG: ${{ github.run_number }}
+  AUTHOR: '`${{ github.actor }}`'
+  APP: '`upet-frontend-test`'
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'nocd')"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Installing modules
+        run: yarn install
+
+      - name: Create Frontend Build
+        run: yarn deploy

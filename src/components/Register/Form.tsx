@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -13,7 +13,11 @@ import { FormValues } from 'routes/types';
 import { formStyle } from './style';
 import { registerSchema } from 'pages/Register/validation';
 
-function Form({ setFormData }) {
+interface IFormProps {
+  submitFormAction: (formData: FormValues) => void;
+}
+
+const Form: FC<IFormProps> = ({ submitFormAction }) => {
   const classes = formStyle({ error: false });
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -32,12 +36,12 @@ function Form({ setFormData }) {
 
   const { control, formState, handleSubmit } = form;
 
-  const onSubmit = data => {
+  const onSubmit = (formData: FormValues) => {
     setLoading(true);
 
     setTimeout(() => {
       setLoading(false);
-      setFormData(data);
+      submitFormAction(formData);
     }, 2000);
   };
 
@@ -101,6 +105,6 @@ function Form({ setFormData }) {
       </Backdrop>
     </Grid>
   );
-}
+};
 
 export default Form;

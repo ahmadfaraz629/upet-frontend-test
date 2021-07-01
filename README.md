@@ -9,9 +9,6 @@
 - [redux-saga](https://www.npmjs.com/package/redux-saga) for redux middleware.
 - [axios](https://www.npmjs.com/package/axios) for making AJAX calls to a server.
 - [material-ui](https://www.npmjs.com/package/@material-ui/core) for frontend template.
-- [node-sass](https://npmjs.org/package/node-sass) for sass support.
-- [react-countup](https://www.npmjs.com/package/react-ga) for summary numeric values animaition.
-- [lodash.get](https://www.npmjs.com/package/lodash.get) to access nested value from object.
 
 ##### For Devevelopment
 
@@ -73,17 +70,9 @@ The client folder houses the client application for project. This is where clien
 
 ## App Components
 
-### api/
-
-API directory contains the api calls which are triggering through the app. The purpose of api/ directory is to create an abstract layer for api with function with the paramters.
-
 ### components/
 
 Components contains all the feature of blocks application page. Components should work like feature based widgets and should be rendered through the pages.
-
-### config/
-
-Config directory contains all the configurations of the app like app name, api base path, api routes etc.
 
 ### pages/
 
@@ -104,10 +93,6 @@ Reducers directory contain reducers for each app module.
 ### store/sagas
 
 Sagas directory contain sagas for each app module.
-
-### store/selectors
-
-Selectors directory contain memoized selectors for each app module.
 
 ### types/
 
