@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "516872616ee7a1efc8c693d738415d68",
+    "revision": "f91c09dee798234b7e991b9b66e1e500",
     "url": "/upet-frontend-test/index.html"
   },
   {
@@ -20,15 +20,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/upet-frontend-test/static/js/3.fa511c5d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ff9c0dc40dc7e43e8679",
-    "url": "/upet-frontend-test/static/js/4.2b0bb7ad.chunk.js"
+    "revision": "070ff1218a5926dd2560",
+    "url": "/upet-frontend-test/static/js/4.41a5e0fe.chunk.js"
   },
   {
     "revision": "713b97caa8621f2014c9",
     "url": "/upet-frontend-test/static/js/main.0dfd51e7.chunk.js"
   },
   {
-    "revision": "ab23ac8c36fadc58c8b0",
-    "url": "/upet-frontend-test/static/js/runtime-main.07e6a0db.js"
+    "revision": "c05f7eb1543c6139813f",
+    "url": "/upet-frontend-test/static/js/runtime-main.1de43cca.js"
   }
 ]);
