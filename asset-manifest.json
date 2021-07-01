@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/upet-frontend-test/static/css/main.819e4dd6.chunk.css",
-    "main.js": "/upet-frontend-test/static/js/main.db977edc.chunk.js",
-    "main.js.map": "/upet-frontend-test/static/js/main.db977edc.chunk.js.map",
-    "runtime-main.js": "/upet-frontend-test/static/js/runtime-main.c0667346.js",
-    "runtime-main.js.map": "/upet-frontend-test/static/js/runtime-main.c0667346.js.map",
-    "static/js/2.cc933a4e.chunk.js": "/upet-frontend-test/static/js/2.cc933a4e.chunk.js",
-    "static/js/2.cc933a4e.chunk.js.map": "/upet-frontend-test/static/js/2.cc933a4e.chunk.js.map",
-    "static/js/3.74317268.chunk.js": "/upet-frontend-test/static/js/3.74317268.chunk.js",
-    "static/js/3.74317268.chunk.js.map": "/upet-frontend-test/static/js/3.74317268.chunk.js.map",
-    "static/js/4.10a7884d.chunk.js": "/upet-frontend-test/static/js/4.10a7884d.chunk.js",
-    "static/js/4.10a7884d.chunk.js.map": "/upet-frontend-test/static/js/4.10a7884d.chunk.js.map",
+    "main.js": "/upet-frontend-test/static/js/main.bc300ff9.chunk.js",
+    "main.js.map": "/upet-frontend-test/static/js/main.bc300ff9.chunk.js.map",
+    "runtime-main.js": "/upet-frontend-test/static/js/runtime-main.1091a34c.js",
+    "runtime-main.js.map": "/upet-frontend-test/static/js/runtime-main.1091a34c.js.map",
+    "static/js/2.af101fcc.chunk.js": "/upet-frontend-test/static/js/2.af101fcc.chunk.js",
+    "static/js/2.af101fcc.chunk.js.map": "/upet-frontend-test/static/js/2.af101fcc.chunk.js.map",
+    "static/js/3.8ed179dd.chunk.js": "/upet-frontend-test/static/js/3.8ed179dd.chunk.js",
+    "static/js/3.8ed179dd.chunk.js.map": "/upet-frontend-test/static/js/3.8ed179dd.chunk.js.map",
+    "static/js/4.95dbc0cd.chunk.js": "/upet-frontend-test/static/js/4.95dbc0cd.chunk.js",
+    "static/js/4.95dbc0cd.chunk.js.map": "/upet-frontend-test/static/js/4.95dbc0cd.chunk.js.map",
     "index.html": "/upet-frontend-test/index.html",
-    "precache-manifest.2531ae66055c9ad779dfda6223edcb17.js": "/upet-frontend-test/precache-manifest.2531ae66055c9ad779dfda6223edcb17.js",
+    "precache-manifest.a001e7f761716f30f592d1c01679a899.js": "/upet-frontend-test/precache-manifest.a001e7f761716f30f592d1c01679a899.js",
     "service-worker.js": "/upet-frontend-test/service-worker.js",
     "static/css/main.819e4dd6.chunk.css.map": "/upet-frontend-test/static/css/main.819e4dd6.chunk.css.map",
-    "static/js/2.cc933a4e.chunk.js.LICENSE.txt": "/upet-frontend-test/static/js/2.cc933a4e.chunk.js.LICENSE.txt",
-    "static/js/3.74317268.chunk.js.LICENSE.txt": "/upet-frontend-test/static/js/3.74317268.chunk.js.LICENSE.txt"
+    "static/js/2.af101fcc.chunk.js.LICENSE.txt": "/upet-frontend-test/static/js/2.af101fcc.chunk.js.LICENSE.txt",
+    "static/js/3.8ed179dd.chunk.js.LICENSE.txt": "/upet-frontend-test/static/js/3.8ed179dd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c0667346.js",
-    "static/js/3.74317268.chunk.js",
+    "static/js/runtime-main.1091a34c.js",
+    "static/js/3.8ed179dd.chunk.js",
     "static/css/main.819e4dd6.chunk.css",
-    "static/js/main.db977edc.chunk.js"
+    "static/js/main.bc300ff9.chunk.js"
   ]
 }
