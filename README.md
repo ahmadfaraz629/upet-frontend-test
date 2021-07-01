@@ -58,6 +58,10 @@ yarn start
 
 3. Head over to [http://localhost:3000](http://localhost:3000) to see the app live!
 
+## Form Submission
+
+Form submission result can be views at [https://beeceptor.com/console/upett](https://beeceptor.com/console/upett)
+
 ## File Structure
 
 ### build/
